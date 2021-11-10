@@ -28,7 +28,7 @@
 
 # Todo List
 - `Controller`, `Service`, `DTO`, `Repository`, `Domain` 패키지로 나눠서 개발하였습니다!
-- 
+ - 멀티모듈에 맞는 패키지 구조를 
 
 # 프로젝트 진행 순서
 0. 기능요건을 정확히 명세한다.
