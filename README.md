@@ -3,8 +3,10 @@
 - 프로젝트하면서 활발하게 공유할 것 있으면 서로 공유하기!
 - Kotlin & Spring Boot & Spring Data JPA & QueryDSL
 
-# 아키텍처
+# 패키지 구조
 - 멀티모듈 방식을 차용
+- `Controller`, `Service`, `DTO`, `Repository`, `Domain` 패키지로 나눠서 개발하였습니다!
+  - 멀티모듈에 맞는 패키지 구조를 구현하라.
 
 # Code & Commit Convention
 - 코틀린스럽게 작성 하는것을 지향한다.
@@ -27,8 +29,6 @@
 
 
 # Todo List
-- `Controller`, `Service`, `DTO`, `Repository`, `Domain` 패키지로 나눠서 개발하였습니다!
- - 멀티모듈에 맞는 패키지 구조를 
 
 # 프로젝트 진행 순서
 0. 기능요건을 정확히 명세한다.
