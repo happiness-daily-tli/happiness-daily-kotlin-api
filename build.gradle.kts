@@ -31,7 +31,7 @@ subprojects {
 
     dependencies {
         implementation("org.springframework.boot:spring-boot-starter-web")
-//    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+        implementation("org.springframework.boot:spring-boot-starter-data-jpa")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
         developmentOnly("org.springframework.boot:spring-boot-devtools")
@@ -51,7 +51,7 @@ subprojects {
     }
 }
 
-project(":app-client-api") {
+project(":happiness-app-api") {
     val jar: Jar by tasks
     val bootJar: BootJar by tasks
 
@@ -63,7 +63,7 @@ project(":app-client-api") {
     }
 }
 
-project(":common") {
+project(":happiness-common") {
     val jar: Jar by tasks
     val bootJar: BootJar by tasks
 
