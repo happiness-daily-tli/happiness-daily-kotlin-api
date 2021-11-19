@@ -1,7 +1,11 @@
 rootProject.name = "happiness-daily-api"
 
-include(":app-client-api")
-include(":common")
+include(
+    "happiness-app-api",
+    "happiness-common",
+    "modules:logging",
+    "modules:monitoring"
+)
 
-project(":app-client-api").projectDir = File("app/client-api")
-project(":common").projectDir = File("common")
+project(":happiness-app-api").projectDir = File("happiness-app-api")
+project(":happiness-common").projectDir = File("happiness-common")
