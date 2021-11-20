@@ -5,19 +5,17 @@
 
 # 패키지 구조
 - 멀티모듈 방식을 차용
-- `Controller`, `Service`, `DTO`, `Repository`, `Domain` 패키지로 나눠서 개발하였습니다!
-  - 멀티모듈에 맞는 패키지 구조를 구현하라.
+
+```
+- app (:APP 서비스 로직)
+- common (:공통 도메인 로직)
+- modules (:외부 모듈)
+```
 
 # Code & Commit Convention
 - 코틀린스럽게 작성 하는것을 지향한다.
 - PR템플릿을 적절히 활용하여 작성하자.
 - 최소한의 기능당 테스트코드 1개를 작성하여 PR을 날린다.
- 
-```
-- app
-- domain
-- common
-```
 
 # Describe - Context - It
 - Describe - Context - It 기반 Test Code를 작성한다.
