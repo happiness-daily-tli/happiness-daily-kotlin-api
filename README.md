@@ -5,6 +5,7 @@
 
 # 패키지 구조
 - 멀티모듈 방식을 차용
+- 참고 문서 [https://techblog.woowahan.com/2637/]
 
 ```
 - app (:APP 서비스 로직)
