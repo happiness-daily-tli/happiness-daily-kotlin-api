@@ -11,12 +11,14 @@
 - app (:APP 서비스 로직)
 - common (:공통 도메인 로직)
 - modules (:외부 모듈)
+- http-request (:http file)
 ```
 
 # Code & Commit Convention
 - 코틀린스럽게 작성 하는것을 지향한다.
 - PR템플릿을 적절히 활용하여 작성하자.
 - 최소한의 기능당 테스트코드 1개를 작성하여 PR을 날린다.
+- `KotlinCodeStyle.xml` 코드 스타일 가이드를 따른다.
 
 # Describe - Context - It
 - Describe - Context - It 기반 Test Code를 작성한다.
