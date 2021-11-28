@@ -13,5 +13,3 @@ spring:
 logging:
   level:
     root: INFO
-    com.kurly.cloud.api.coupon: DEBUG
-    com.kurly.cloud.api.common: ERROR
