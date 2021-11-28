@@ -1,8 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
-    id("org.springframework.boot") version "2.5.3"
+    id("org.springframework.boot") version "2.5.7"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("com.gorylenko.gradle-git-properties") version "2.3.1"
 
@@ -48,29 +47,5 @@ subprojects {
 
     tasks.withType<Test> {
         useJUnitPlatform()
-    }
-}
-
-project(":happiness-app-api") {
-    val jar: Jar by tasks
-    val bootJar: BootJar by tasks
-
-    bootJar.enabled = false
-    jar.enabled = true
-
-    springBoot {
-        buildInfo()
-    }
-}
-
-project(":happiness-common") {
-    val jar: Jar by tasks
-    val bootJar: BootJar by tasks
-
-    bootJar.enabled = false
-    jar.enabled = true
-
-    springBoot {
-        buildInfo()
     }
 }
