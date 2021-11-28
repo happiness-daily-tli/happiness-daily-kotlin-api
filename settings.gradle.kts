@@ -7,9 +7,6 @@ include(
     "modules:monitoring"
 )
 
-project(":happiness-app-api").projectDir = File("happiness-app-api")
-project(":happiness-common").projectDir = File("happiness-common")
-
 pluginManagement {
     val kotlinVersion: String by settings
 }
