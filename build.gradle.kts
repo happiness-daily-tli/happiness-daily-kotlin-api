@@ -51,18 +51,6 @@ subprojects {
     }
 }
 
-project(":happiness-app-api") {
-    val jar: Jar by tasks
-    val bootJar: BootJar by tasks
-
-    bootJar.enabled = false
-    jar.enabled = true
-
-    springBoot {
-        buildInfo()
-    }
-}
-
 project(":happiness-common") {
     val jar: Jar by tasks
     val bootJar: BootJar by tasks
