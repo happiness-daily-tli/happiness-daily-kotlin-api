@@ -2,7 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.springframework.boot.gradle.tasks.bundling.BootJar
 
 plugins {
-    id("org.springframework.boot") version "2.5.3"
+    id("org.springframework.boot") version "2.5.6"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("com.gorylenko.gradle-git-properties") version "2.3.1"
 
@@ -34,7 +34,9 @@ subprojects {
         implementation("org.springframework.boot:spring-boot-starter-data-jpa")
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
         developmentOnly("org.springframework.boot:spring-boot-devtools")
+
         runtimeOnly("org.postgresql:postgresql")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
     }

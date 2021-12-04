@@ -1,6 +1,13 @@
-#spring:
-#  profiles:
-#    active: dev
+spring:
+  profiles:
+    active: local
+
+  datasource:
+    url:
+    driver-class-name:
+    username:
+    password:
+
 #  datasource:
 #    hikari:
 #      driver-class-name: org.postgresql.Driver
@@ -16,3 +23,5 @@
 #spring:
 #  datasource:
 #    url: jbdc
+
+---
