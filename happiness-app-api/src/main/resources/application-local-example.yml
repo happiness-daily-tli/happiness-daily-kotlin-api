@@ -1,20 +1,20 @@
 spring:
   profiles:
-    active: dev
+    active: local
 
   jackson:
     property-naming-strategy: SNAKE_CASE
 
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: create
     show-sql: true
 
   datasource:
     url:
     username:
     password:
-    driver-class-name: org.postgresql.Driver
+    driver-class-name: org.h2.Driver
 
 logging:
   level:
