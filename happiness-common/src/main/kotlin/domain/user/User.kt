@@ -1,10 +1,7 @@
 package domain.user
 
 import domain.BaseEntity
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import javax.persistence.*
 
 @Entity
 class User(
@@ -15,5 +12,15 @@ class User(
     val nickname: String,
 
     val socialType: String,
+
+    val userLevel: Int,
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn
+    val userAlarm: UserAlarm,
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn
+    val userToken: UserToken,
 
 ) : BaseEntity()
