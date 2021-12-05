@@ -22,6 +22,4 @@ class Post(
     @JoinColumn
     val postImages: PostImages,
 
-
-
 ) : BaseEntity()

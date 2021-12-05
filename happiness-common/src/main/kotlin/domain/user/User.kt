@@ -16,6 +16,4 @@ class User(
 
     val socialType: String,
 
-    val refreshToken: String,
-
 ) : BaseEntity()
