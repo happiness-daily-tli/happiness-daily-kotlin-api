@@ -10,10 +10,10 @@ class Comment(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
 
-    val content: String,
+    val commentContent: String,
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
-    val postContent: Content
+    val content: Content
 
 ) : BaseEntity()
