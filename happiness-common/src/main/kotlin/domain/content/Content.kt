@@ -23,8 +23,4 @@ class Content(
     @JoinColumn
     val contentImages: ContentImages,
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn
-    val comment: Comment,
-
-    ) : BaseEntity()
+) : BaseEntity()
