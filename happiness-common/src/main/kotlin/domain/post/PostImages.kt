@@ -1,5 +1,6 @@
 package domain.post
 
+import domain.BaseEntity
 import javax.persistence.Entity
 import javax.persistence.GeneratedValue
 import javax.persistence.GenerationType
@@ -12,4 +13,5 @@ class PostImages (
     val id: Long,
 
     val imageUrl: String,
-)
+
+) : BaseEntity()
