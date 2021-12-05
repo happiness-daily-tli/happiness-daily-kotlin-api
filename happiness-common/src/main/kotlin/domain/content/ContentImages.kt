@@ -1,4 +1,4 @@
-package domain.post
+package domain.content
 
 import domain.BaseEntity
 import javax.persistence.Entity
@@ -7,7 +7,7 @@ import javax.persistence.GenerationType
 import javax.persistence.Id
 
 @Entity
-class PostImages (
+class ContentImages (
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
