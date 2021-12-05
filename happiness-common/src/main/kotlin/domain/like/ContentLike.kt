@@ -13,7 +13,7 @@ class ContentLike(
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
-    val post: Content,
+    val content: Content,
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
