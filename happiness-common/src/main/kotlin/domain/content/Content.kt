@@ -21,7 +21,7 @@ class Content(
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
-    val postImages: ContentImages,
+    val contentImages: ContentImages,
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
