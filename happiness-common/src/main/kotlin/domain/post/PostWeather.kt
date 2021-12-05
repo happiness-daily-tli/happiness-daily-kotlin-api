@@ -1,8 +1,5 @@
 package domain.post
 
-/**
- * created by Gyunny 2021/12/05
- */
 enum class PostWeather(
     private val weather: String
 ) {
