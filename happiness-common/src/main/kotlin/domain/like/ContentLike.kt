@@ -1,25 +1,22 @@
-package domain.post
+package domain.like
 
 import domain.BaseEntity
+import domain.content.Content
+import domain.user.User
 import javax.persistence.*
 
 @Entity
-class Post(
+class ContentLike(
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long,
 
-    val title: String,
-
-    val content: String,
-
-    @Enumerated(EnumType.STRING)
-    val weather: PostWeather,
-
-    val isOpen: Boolean,
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn
+    val post: Content,
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
-    val postImages: PostImages,
+    val user: User
 
 ) : BaseEntity()

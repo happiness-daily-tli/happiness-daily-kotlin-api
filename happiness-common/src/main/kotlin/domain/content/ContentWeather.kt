@@ -1,6 +1,6 @@
-package domain.post
+package domain.content
 
-enum class PostWeather(
+enum class ContentWeather(
     private val weather: String
 ) {
     RAIN("비"),
