@@ -1,10 +1,8 @@
 package domain.comment
 
 import domain.BaseEntity
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import domain.content.Content
+import javax.persistence.*
 
 @Entity
 class Comment(
@@ -13,5 +11,9 @@ class Comment(
     val id: Long,
 
     val content: String,
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn
+    val postContent: Content
 
 ) : BaseEntity()
