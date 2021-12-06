@@ -1,7 +1,6 @@
 package domain.content
 
 import domain.BaseEntity
-import domain.comment.Comment
 import javax.persistence.*
 
 @Entity
