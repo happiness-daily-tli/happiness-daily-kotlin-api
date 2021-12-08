@@ -5,8 +5,10 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class ContentGenerateController {
+
     @PostMapping("v1/content")
     fun generate(): String {
+
         return "1"
     }
 }

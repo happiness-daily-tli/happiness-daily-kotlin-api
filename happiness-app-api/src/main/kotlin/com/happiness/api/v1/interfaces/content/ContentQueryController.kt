@@ -4,10 +4,10 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class ContentReadController {
+class ContentQueryController {
 
     @GetMapping("v1/content")
-    fun read(): String {
+    fun query(): String {
         return "1"
     }
 }

@@ -16,6 +16,10 @@ allprojects {
     }
 }
 
+object Version {
+    const val kotest = "5.0.1"
+}
+
 subprojects {
     apply(plugin = "kotlin")
     apply(plugin = "org.springframework.boot")
@@ -24,8 +28,8 @@ subprojects {
     apply(plugin = "org.jetbrains.kotlin.plugin.jpa")
     apply(plugin = "com.gorylenko.gradle-git-properties")
 
-    group = "com.happiness"
     version = "0.0.1"
+    group = "com.happiness"
     java.sourceCompatibility = JavaVersion.VERSION_11
 
     dependencies {
@@ -34,12 +38,11 @@ subprojects {
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-        developmentOnly("org.springframework.boot:spring-boot-devtools")
-        developmentOnly("com.h2database:h2:1.4.200")
-
         runtimeOnly("org.postgresql:postgresql")
+        testRuntimeOnly("com.h2database:h2")
+
         testImplementation("org.springframework.boot:spring-boot-starter-test")
-        testImplementation("com.h2database:h2:1.4.200")
+        testImplementation("io.kotest:kotest-runner-junit5:${Version.kotest}")
     }
 
     tasks.withType<KotlinCompile> {
