@@ -1,9 +1,9 @@
-package com.happiness.api.v1.interfaces.content.dto
+package com.happiness.api.v1.application.dto.content
 
 import com.sun.istack.NotNull
 
 data class ContentGenerateRequestDto(
 
     @field:NotNull
-    var isContent: Boolean
+    var isContent: Boolean = false
 )
