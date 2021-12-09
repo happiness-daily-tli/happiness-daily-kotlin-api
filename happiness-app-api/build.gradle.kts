@@ -7,6 +7,8 @@ tasks.getByName("jar") {
 }
 
 dependencies {
+    implementation(project(":happiness-common"))
+
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
