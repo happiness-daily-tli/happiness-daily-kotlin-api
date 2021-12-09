@@ -1,11 +1,10 @@
-package com.happiness.api.v1.interfaces.content
+package com.happiness.api.v1.adapter.`in`.presentation
 
-import com.happiness.api.v1.interfaces.content.dto.ContentGenerateRequestDto
+import com.happiness.api.v1.application.dto.content.ContentGenerateRequestDto
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import javax.validation.Valid
-
 
 @RestController
 class ContentGenerateController {
@@ -14,7 +13,6 @@ class ContentGenerateController {
     fun generate(
         @RequestBody @Valid contentGenerateRequestDto: ContentGenerateRequestDto
     ): String {
-
         return "1"
     }
 }

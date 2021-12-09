@@ -1,4 +1,4 @@
-package com.happiness.api.v1.interfaces.content
+package com.happiness.api.v1.adapter.`in`.presentation
 
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController
