@@ -5,9 +5,12 @@
 
 # 패키지 구조
 - 멀티모듈 방식을 차용
-- 참고 문서 [https://techblog.woowahan.com/2637/]
+- 참고 문서 
+  - [https://techblog.woowahan.com/2637/]
+  - [https://zkdlu.tistory.com/4]
 
 ```
+WIP
 - app (:APP 서비스 로직)
 - common (:공통 도메인 로직)
 - modules (:외부 모듈)
