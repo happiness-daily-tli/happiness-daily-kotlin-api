@@ -1,8 +1,8 @@
-package com.happiness.api.v1.adapter.`in`.presentation
+package com.happiness.api.v1.content.adapter.`in`.presentation
 
-import com.happiness.api.v1.application.dto.content.ContentGenerateRequestDto
-import com.happiness.api.v1.application.port.`in`.ContentGenerateUseCase
-import com.happiness.api.v1.application.port.command.ContentGenerateCommand
+import com.happiness.api.v1.content.application.dto.ContentGenerateRequestDto
+import com.happiness.api.v1.content.application.port.`in`.ContentGenerateUseCase
+import com.happiness.api.v1.content.application.port.command.ContentGenerateCommand
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
