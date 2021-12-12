@@ -1,4 +1,4 @@
-package com.happiness.api.v1.application.port.command
+package com.happiness.api.v1.content.application.port.command
 
 data class ContentGenerateCommand(
 

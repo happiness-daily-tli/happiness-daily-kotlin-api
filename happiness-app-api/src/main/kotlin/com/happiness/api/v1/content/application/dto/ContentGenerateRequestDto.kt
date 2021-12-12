@@ -1,4 +1,4 @@
-package com.happiness.api.v1.application.dto.content
+package com.happiness.api.v1.content.application.dto
 
 import domain.content.ContentImages
 import domain.content.ContentWeather
