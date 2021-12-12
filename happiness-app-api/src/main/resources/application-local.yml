@@ -11,7 +11,7 @@ spring:
     show-sql: true
 
   datasource:
-    url: jdbc:h2:tcp://localhost/~/database/h2-database
+    url: jdbc:h2:mem:happy-db
     username: sa
     password:
     driver-class-name: org.h2.Driver
