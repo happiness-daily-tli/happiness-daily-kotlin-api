@@ -9,6 +9,18 @@
 
 ```
 - app (:APP 서비스 로직)
+ - v1
+  - domain (comment, content .. ETC)
+   - adapter (외내부 영역 연계 Port)
+    - in (외부 요청에 의한 비즈니스 호출)
+    - out (비즈니스 로직을 통한 외부 호출)
+   - application
+    - dto
+    - port
+     - in (외부에 요청 UseCase)
+     - out (비즈니스 로직에서 외부로 요청)
+     - command (UseCase를 실행시키는 command)
+    - service
 - common (:공통 도메인 로직)
 - modules (:외부 모듈)
 - http-request (:http file)
