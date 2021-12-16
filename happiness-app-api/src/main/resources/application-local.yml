@@ -1,6 +1,6 @@
 spring:
-  profiles:
-    active: local
+  application:
+    name: happiness-daily-api
 
   jackson:
     property-naming-strategy: SNAKE_CASE
