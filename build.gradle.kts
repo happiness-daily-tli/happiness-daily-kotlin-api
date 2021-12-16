@@ -39,13 +39,11 @@ subprojects {
         implementation("org.jetbrains.kotlin:kotlin-reflect")
         implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-        runtimeOnly("org.postgresql:postgresql")
-        testRuntimeOnly("com.h2database:h2")
-
+        developmentOnly("com.h2database:h2:1.4.200")
         testImplementation("org.springframework.boot:spring-boot-starter-test")
         testImplementation("io.kotest:kotest-runner-junit5:${Version.kotest}")
         testImplementation("io.kotest:kotest-assertions-core:${Version.kotest}")
-        testImplementation("io.kotest:kotest-extensions-spring:${Version.kotest}")
+        testImplementation("io.kotest:kotest-extensions-spring-jvm:${Version.kotest}")
     }
 
     tasks.withType<KotlinCompile> {
