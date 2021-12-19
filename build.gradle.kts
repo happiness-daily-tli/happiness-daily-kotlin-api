@@ -43,7 +43,6 @@ subprojects {
         testImplementation("org.springframework.boot:spring-boot-starter-test")
         testImplementation("io.kotest:kotest-runner-junit5:${Version.kotest}")
         testImplementation("io.kotest:kotest-assertions-core:${Version.kotest}")
-        testImplementation("io.kotest:kotest-extensions-spring-jvm:${Version.kotest}")
     }
 
     tasks.withType<KotlinCompile> {
