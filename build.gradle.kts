@@ -17,7 +17,7 @@ allprojects {
 }
 
 object Version {
-    const val kotest = "5.0.1"
+    const val kotest = "4.6.3"
 }
 
 subprojects {
