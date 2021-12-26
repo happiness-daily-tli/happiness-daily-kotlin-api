@@ -3,15 +3,13 @@ package com.happiness.api.v1.content.adapter.`in`.presentation
 import com.happiness.api.v1.content.application.dto.ContentGenerateRequestDto
 import domain.content.ContentImages
 import domain.content.ContentWeather
-import io.kotest.core.annotation.DisplayName
+import io.kotest.core.spec.DisplayName
 import io.kotest.core.spec.style.DescribeSpec
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
 import org.springframework.test.context.ActiveProfiles
 import org.springframework.test.web.servlet.MockMvc
 
 @ActiveProfiles("test")
-@AutoConfigureMockMvc
 @DisplayName("ContentGenerateController 클래스")
 @WebMvcTest(ContentGenerateController::class)
 class ContentGenerateControllerTest : DescribeSpec({
