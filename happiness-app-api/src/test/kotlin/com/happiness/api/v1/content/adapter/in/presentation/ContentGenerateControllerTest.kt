@@ -1,7 +1,5 @@
 package com.happiness.api.v1.content.adapter.`in`.presentation
 
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.happiness.api.v1.content.application.dto.ContentGenerateRequestDto
 import domain.content.ContentImages
 import domain.content.ContentWeather
@@ -15,7 +13,7 @@ import org.springframework.test.web.servlet.MockMvc
 @DisplayName("ContentGenerateController 클래스")
 @WebMvcTest(ContentGenerateController::class)
 class ContentGenerateControllerTest : DescribeSpec({
-    lateinit var mockMvc: MockMvc
+    var mockMvc: MockMvc
     val uri = "v1/content"
 
 //    Describe	설명할 테스트 대상을 명시한다.
@@ -25,27 +23,26 @@ class ContentGenerateControllerTest : DescribeSpec({
         context("올바른 컨텐츠 데이터를 전달 받은 경우") {
 //            every {}
 
-            val content = ContentGenerateRequestDto(
-                title = "제목 테스트",
-                content = "내용입니다.",
-                contentImages = ContentImages(1, "dsa"),
-                weather = ContentWeather.CLOUDY
-            )
+            val requestBody = """
+                {
+                    "title": "제목 입니다.",
+                    "content": "내용 입니다.",
+                    "contentImages": {
+                        "id": 1
+                        "imageUrl": "https://temp.img"
+                    },
+                    "weather": "CLOUDY"
+                }
+            """.trimIndent()
+//            import org.springframework.restdocs.mockmvc.RestDocumentationRequestBuilders
 
-            val mapper = jacksonObjectMapper()
-            val json = mapper.writeValueAsString(content)
-            println(json)
-
-
-//            val json = jacksonObjectMapper().writeValueAsString(content)
-//
-//            it("컨텐츠 정보를 등록한다.") {
+            it("컨텐츠 정보를 등록한다.") {
 //                mockMvc.perform(
 //                    post(uri)
 //                        .contentType(MediaType.APPLICATION_JSON)
 //                        .body(json)
 //                ).andDo(MockMvcResultHandlers.print())
-//            }
+            }
         }
 
         context("올바른 컨텐츠 데이터를 전달 받지 못한 경우") {
