@@ -1,5 +1,7 @@
 package com.happiness.api.v1.content.adapter.`in`.presentation
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.happiness.api.v1.content.application.dto.ContentGenerateRequestDto
 import domain.content.ContentImages
 import domain.content.ContentWeather
@@ -30,15 +32,20 @@ class ContentGenerateControllerTest : DescribeSpec({
                 weather = ContentWeather.CLOUDY
             )
 
-//            val json = jacksonObjectMapper().writeValueAsString(content)
+            val mapper = jacksonObjectMapper()
+            val json = mapper.writeValueAsString(content)
+            println(json)
 
-            it("컨텐츠 정보를 등록한다.") {
+
+//            val json = jacksonObjectMapper().writeValueAsString(content)
+//
+//            it("컨텐츠 정보를 등록한다.") {
 //                mockMvc.perform(
 //                    post(uri)
 //                        .contentType(MediaType.APPLICATION_JSON)
-//                        .body(content.toArray())
+//                        .body(json)
 //                ).andDo(MockMvcResultHandlers.print())
-            }
+//            }
         }
 
         context("올바른 컨텐츠 데이터를 전달 받지 못한 경우") {
