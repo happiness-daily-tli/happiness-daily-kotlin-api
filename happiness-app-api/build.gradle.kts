@@ -10,8 +10,9 @@ dependencies {
     implementation(project(":happiness-common"))
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.1")
 
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.+")
+    testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
 }
 
 springBoot {
