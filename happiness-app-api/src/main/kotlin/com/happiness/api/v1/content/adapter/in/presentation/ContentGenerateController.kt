@@ -17,6 +17,7 @@ class ContentGenerateController(
     fun generate(
         @RequestBody @Valid contentGenerateRequestDto: ContentGenerateRequestDto
     ): String {
+
         contentGenerateUseCase.generate(
             ContentGenerateCommand().apply {
 
