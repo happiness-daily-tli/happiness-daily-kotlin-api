@@ -17,8 +17,7 @@ allprojects {
 }
 
 object Version {
-    const val kotest = "4.6.4"
-    const val kotest_extenstion = "4.4.3"
+    const val kotest = "4.4.3"
 }
 
 subprojects {
@@ -44,7 +43,7 @@ subprojects {
         testImplementation("org.springframework.boot:spring-boot-starter-test")
         testImplementation("io.kotest:kotest-runner-junit5:${Version.kotest}")
         testImplementation("io.kotest:kotest-assertions-core:${Version.kotest}")
-        testImplementation("io.kotest:kotest-extensions-spring:${Version.kotest_extenstion}")
+        testImplementation("io.kotest:kotest-extensions-spring:${Version.kotest}")
     }
 
     tasks.withType<KotlinCompile> {
