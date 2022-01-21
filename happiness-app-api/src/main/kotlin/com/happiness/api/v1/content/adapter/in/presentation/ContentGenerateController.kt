@@ -18,11 +18,11 @@ class ContentGenerateController(
         @RequestBody @Valid contentGenerateRequestDto: ContentGenerateRequestDto
     ): String {
 
-        contentGenerateUseCase.generate(
-            ContentGenerateCommand().apply {
-
-            }
-        )
+//        contentGenerateUseCase.generate(
+//            ContentGenerateCommand().apply {
+//
+//            }
+//        )
         return "1"
     }
 }
