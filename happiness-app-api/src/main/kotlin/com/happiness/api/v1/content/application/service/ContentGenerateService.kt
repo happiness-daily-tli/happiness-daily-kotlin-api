@@ -8,8 +8,6 @@ import com.happiness.api.v1.content.application.port.command.ContentGenerateComm
 class ContentGenerateService : ContentGenerateUseCase {
 
     override fun generate(command: ContentGenerateCommand): String {
-
-
         TODO("Not yet implemented")
     }
 }

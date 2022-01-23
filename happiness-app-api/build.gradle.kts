@@ -15,6 +15,7 @@ dependencies {
 
     testImplementation(project(":test-helper"))
     testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
+    testImplementation("com.ninja-squad:springmockk:3.0.1")
 }
 
 springBoot {
