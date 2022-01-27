@@ -1,39 +1,21 @@
 package com.happiness.api.v1.content.adapter.`in`.presentation
 
-import com.happiness.api.config.MockMvcTestConfig
+import com.happiness.api.common.KoTestDescribeSpec
 import com.happiness.api.v1.content.application.port.`in`.ContentGenerateUseCase
 import com.ninjasquad.springmockk.MockkBean
 import io.kotest.core.spec.DisplayName
-import io.kotest.core.spec.style.DescribeSpec
-import io.kotest.extensions.spring.SpringExtension
 import io.mockk.every
-import io.mockk.impl.annotations.MockK
-import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
-import org.springframework.context.annotation.Import
 import org.springframework.http.MediaType
 import org.springframework.test.context.ActiveProfiles
-import org.springframework.test.context.web.WebAppConfiguration
-import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 @ActiveProfiles("test")
-@AutoConfigureMockMvc
-@Import(
-    MockMvcTestConfig::class
-)
-@WebAppConfiguration
 @WebMvcTest(ContentGenerateController::class)
 @DisplayName("ContentGenerateController 클래스")
-class ContentGenerateControllerTest : DescribeSpec() {
-
-    override fun extensions() = listOf(SpringExtension)
-
-    @Autowired
-    lateinit var mockMvc: MockMvc
+class ContentGenerateControllerTest : KoTestDescribeSpec() {
 
     @MockkBean
     lateinit var contentGenerateUseCase: ContentGenerateUseCase
@@ -41,7 +23,6 @@ class ContentGenerateControllerTest : DescribeSpec() {
     private val uri = "v1/content"
 
     init {
-
 //    Describe	설명할 테스트 대상을 명시한다.
 //    Context	테스트 대상이 놓인 상황을 설명한다.
 //    It	테스트 대상의 행동을 설명한다.
