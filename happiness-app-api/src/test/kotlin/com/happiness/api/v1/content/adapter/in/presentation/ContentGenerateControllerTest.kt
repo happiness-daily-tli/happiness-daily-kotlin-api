@@ -20,7 +20,7 @@ class ContentGenerateControllerTest : KoTestDescribeSpec() {
     @MockkBean
     lateinit var contentGenerateUseCase: ContentGenerateUseCase
 
-    private val uri = "v1/content"
+    private val uri = "/v1/content"
 
     init {
 //    Describe	설명할 테스트 대상을 명시한다.
