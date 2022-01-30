@@ -1,7 +1,12 @@
 package com.happiness.api.v1.content.application.port.command
 
-data class ContentGenerateCommand(
+import domain.content.ContentImages
+import domain.content.ContentWeather
 
-    // @TODO 임시로 생성
-    val limit: Int = 0
+data class ContentGenerateCommand(
+    var title: String,
+    var content: String,
+    var weather: ContentWeather,
+    var isOpen: Boolean = false,
+    var contentImages: ContentImages,
 )
