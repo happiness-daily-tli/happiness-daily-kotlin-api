@@ -15,13 +15,17 @@ class ContentGenerateController(
 
     @PostMapping("v1/content")
     fun generate(
-        @RequestBody @Valid contentGenerateRequestDto: ContentGenerateRequestDto
+        @RequestBody @Valid contentGenerateRequest: ContentGenerateRequestDto
     ): String {
 
         contentGenerateUseCase.generate(
-            ContentGenerateCommand().apply {
-
-            }
+            ContentGenerateCommand(
+                title = contentGenerateRequest.title,
+                content = contentGenerateRequest.content,
+                weather = contentGenerateRequest.weather,
+                isOpen = contentGenerateRequest.isOpen,
+                contentImages = contentGenerateRequest.contentImages
+            )
         )
 
         return "1"
