@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class ContentQueryController {
 
-    @GetMapping("v1/content")
+    @GetMapping("/v1/content")
     fun query(): String {
         return "1"
     }
