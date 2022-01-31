@@ -13,7 +13,7 @@ class ContentGenerateController(
     private val contentGenerateUseCase: ContentGenerateUseCase
 ) {
 
-    @PostMapping("v1/content")
+    @PostMapping("/v1/content")
     fun generate(
         @RequestBody @Valid contentGenerateRequest: ContentGenerateRequestDto
     ): String {
