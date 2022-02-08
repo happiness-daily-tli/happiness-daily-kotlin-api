@@ -10,24 +10,27 @@
   - [https://zkdlu.tistory.com/4]
 
 ```
-WIP
 - app (:APP 서비스 로직)
  - v1
   - domain (comment, content .. ETC)
    - adapter (외내부 영역 연계 Port)
-    - in (외부 요청에 의한 비즈니스 호출)
-    - out (비즈니스 로직을 통한 외부 호출)
+    - in.presentation (외부 요청에 의한 비즈니스 호출) 
+    - out.infrastructure (비즈니스 로직을 통한 외부 호출)
    - application
     - dto
     - port
      - in (외부에 요청 UseCase)
      - out (비즈니스 로직에서 외부로 요청)
      - command (UseCase를 실행시키는 command)
-    - service
+    - service (Appliaction Layer)
 - common (:공통 도메인 로직)
 - modules (:외부 모듈)
 - http-request (:http file)
 ```
+
+# 기타 컨벤션
+- `UseCase가 유저스토리를 기반으로 중복으로 사용될 경우 다른 UseCase를 참조할 수 있다.`
+- `EX: 상품을 등록할때 중복된 상품을 검증한다면 상품 등록 UseCase에서 상품 조회 UseCase를 사용한다.` 
 
 # Code & Commit Convention
 - 코틀린스럽게 작성 하는것을 지향한다.
