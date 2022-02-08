@@ -5,9 +5,8 @@ import javax.persistence.*
 
 @Entity
 class Content(
-
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
+    val id: Long? = null,
 
     val title: String,
 
@@ -21,5 +20,4 @@ class Content(
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
     val contentImages: ContentImages,
-
 ) : BaseEntity()
