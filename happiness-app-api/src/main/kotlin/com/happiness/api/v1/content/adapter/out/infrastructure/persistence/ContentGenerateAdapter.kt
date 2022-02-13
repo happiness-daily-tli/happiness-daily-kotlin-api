@@ -1,6 +1,5 @@
 package com.happiness.api.v1.content.adapter.out.infrastructure.persistence
 
-import com.happiness.api.v1.content.application.port.command.ContentGenerateCommand
 import com.happiness.api.v1.content.application.port.out.ContentGeneratePort
 import com.happiness.api.v1.content.application.port.out.FindContentPort
 import domain.content.Content
@@ -17,6 +16,5 @@ class ContentGenerateAdapter(
 
     override fun find(contentCode: String): Content {
         TODO("Content Return")
-//        return contentRepository.findByContentCode(contentCode)
     }
 }
