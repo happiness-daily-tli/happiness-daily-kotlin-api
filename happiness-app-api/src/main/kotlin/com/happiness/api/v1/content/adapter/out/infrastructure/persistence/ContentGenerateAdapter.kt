@@ -15,6 +15,8 @@ class ContentGenerateAdapter(
     }
 
     override fun find(contentCode: String): Content {
-        TODO("Content Return")
+//        contentRepository.findByContentCode(contentCode)
+
+        TODO("Content Data Return")
     }
 }

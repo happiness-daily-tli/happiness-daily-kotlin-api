@@ -5,8 +5,10 @@ import com.happiness.api.v1.content.application.port.`in`.ContentGenerateUseCase
 import com.happiness.api.v1.content.application.port.command.ContentGenerateCommand
 import com.happiness.api.v1.content.application.port.out.ContentGeneratePort
 import domain.content.Content
+import org.springframework.transaction.annotation.Transactional
 
 @UseCase
+@Transactional
 class ContentGenerateService(
     private val contentGeneratePort: ContentGeneratePort
 ) : ContentGenerateUseCase {
