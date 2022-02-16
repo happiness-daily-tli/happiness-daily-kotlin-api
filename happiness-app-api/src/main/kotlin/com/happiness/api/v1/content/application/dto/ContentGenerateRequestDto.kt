@@ -4,9 +4,9 @@ import domain.content.ContentImages
 import domain.content.ContentWeather
 
 data class ContentGenerateRequestDto(
-    var title: String,
-    var content: String,
-    var weather: ContentWeather,
-    var isOpen: Boolean = false,
-    var contentImages: ContentImages,
+    val title: String,
+    val content: String,
+    val weather: ContentWeather,
+    val isOpen: Boolean = false,
+    val contentImages: ContentImages,
 )
