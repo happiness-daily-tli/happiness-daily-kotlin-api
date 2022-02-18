@@ -12,6 +12,7 @@ class ContentGenerateService(
 ) : ContentGenerateUseCase {
 
     override fun generate(command: ContentGenerateCommand) {
+
         // 저장 UseCase 실행
         contentGeneratePort.save(
             Content(
@@ -19,8 +20,10 @@ class ContentGenerateService(
                 content = command.content,
                 weather = command.weather,
                 isOpen = command.isOpen,
-                contentImages = command.contentImages
+                contentImages = null
             )
         )
+
+//        return
     }
 }
