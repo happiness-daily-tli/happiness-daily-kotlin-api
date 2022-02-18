@@ -17,8 +17,8 @@ class ContentGenerateController(
     private val contentGenerateUseCase: ContentGenerateUseCase
 ) {
 
-    @ResponseStatus(HttpStatus.OK)
     @PostMapping("/v1/content")
+    @ResponseStatus(code = HttpStatus.OK)
     fun generate(
         @RequestBody @Valid contentGenerateRequest: ContentGenerateRequestDto
     ): CommonApiResponseDTO<ContentGenerateResponseDto> {

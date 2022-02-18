@@ -19,5 +19,5 @@ class Content(
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn
-    val contentImages: ContentImages,
+    val contentImages: ContentImages?,
 ) : BaseEntity()

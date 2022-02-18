@@ -8,5 +8,5 @@ data class ContentGenerateCommand(
     var content: String,
     var weather: ContentWeather,
     var isOpen: Boolean = false,
-    var contentImages: ContentImages,
+    var contentImages: ContentImages?,
 )
