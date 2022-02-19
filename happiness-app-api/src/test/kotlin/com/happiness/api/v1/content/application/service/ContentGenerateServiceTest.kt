@@ -1,8 +1,13 @@
 package com.happiness.api.v1.content.application.service
 
 import com.happiness.api.common.KoTestDescribeSpec
+import com.happiness.api.v1.content.application.port.command.ContentGenerateCommand
+import domain.content.ContentImages
+import domain.content.ContentWeather
 
-class ContentGenerateServiceTest : KoTestDescribeSpec() {
+class ContentGenerateServiceTest(
+    private val contentGenerateUseCase: ContentGenerateService
+) : KoTestDescribeSpec() {
 
     /**
      * Describe	설명할 테스트 대상을 명시한다.
@@ -12,12 +17,19 @@ class ContentGenerateServiceTest : KoTestDescribeSpec() {
     init {
         describe("Content Generate Service") {
             context("올바른 컨텐츠 데이터를 전달 받은 경우") {
+                val command = ContentGenerateCommand(
+                    title = "행복해요! 행복일기!",
+                    content = "오늘은 너무 행복했어요!",
+                    weather = ContentWeather.HAPPY,
+                    isOpen = false,
+                    contentImages = null
+                )
 
+                it("데이터 저장에 성공한다.") {
+                    contentGenerateUseCase.generate(command)
+                }
             }
 
-            it("데이터 저장에 성공한다.") {
-
-            }
         }
 
     }
