@@ -8,5 +8,5 @@ data class ContentGenerateRequestDto(
     val content: String,
     val weather: ContentWeather,
     val isOpen: Boolean = false,
-    val contentImages: ContentImages,
+    val contentImages: List<ContentImage>,
 )
