@@ -7,10 +7,10 @@ import javax.persistence.GenerationType
 import javax.persistence.Id
 
 @Entity
-class ContentImages (
+class ContentImage (
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long,
+    val id: Long?,
 
     val imageUrl: String,
 
