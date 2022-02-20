@@ -22,7 +22,7 @@ class ContentGenerateServiceTest(
                     content = "오늘은 너무 행복했어요!",
                     weather = ContentWeather.HAPPY,
                     isOpen = false,
-                    contentImages = null
+                    contentImages = emptyList()
                 )
 
                 it("데이터 저장에 성공한다.") {
