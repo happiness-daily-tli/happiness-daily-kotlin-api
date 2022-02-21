@@ -2,10 +2,15 @@ package com.happiness.api.v1.content.application.service
 
 import com.happiness.api.common.KoTestDescribeSpec
 import com.happiness.api.v1.content.application.port.command.ContentGenerateCommand
+import com.happiness.api.v1.content.application.port.out.ContentGeneratePort
 import domain.content.ContentWeather
+import io.mockk.mockk
 
 class ContentGenerateServiceTest(
-    private val contentGenerateUseCase: ContentGenerateService
+    private val contentGeneratePort: ContentGeneratePort = mockk(),
+    private val contentGenerateUseCase: ContentGenerateService = ContentGenerateService(
+        contentGeneratePort = contentGeneratePort
+    )
 ) : KoTestDescribeSpec() {
 
     /**

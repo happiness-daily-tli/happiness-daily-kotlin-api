@@ -1,6 +1,5 @@
 package com.happiness.api.v1.content.application.dto
 
-import domain.content.ContentImages
 import domain.content.ContentWeather
 
 data class ContentGenerateRequestDto(
