@@ -2,7 +2,6 @@ package com.happiness.api.v1.content.application.service
 
 import com.happiness.api.common.KoTestDescribeSpec
 import com.happiness.api.v1.content.application.port.command.ContentGenerateCommand
-import domain.content.ContentImages
 import domain.content.ContentWeather
 
 class ContentGenerateServiceTest(
