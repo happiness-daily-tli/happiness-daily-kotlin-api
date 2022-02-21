@@ -5,8 +5,10 @@ import com.happiness.api.v1.content.application.port.out.ContentGeneratePort
 import com.happiness.api.v1.content.application.port.out.FindContentPort
 import domain.content.Content
 import org.springframework.stereotype.Component
+import org.springframework.transaction.annotation.Transactional
 
 @Component
+@Transactional
 class ContentGenerateAdapter(
     private val contentRepository: ContentRepository
 ) : ContentGeneratePort, FindContentPort {
@@ -15,6 +17,7 @@ class ContentGenerateAdapter(
         contentRepository.save(content)
     }
 
+    @Transactional(readOnly = true)
     override fun find(contentCode: String): Content {
         TODO("Content Return")
 //        return contentRepository.findByContentCode(contentCode)
