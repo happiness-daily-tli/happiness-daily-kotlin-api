@@ -24,7 +24,6 @@ class ContentGenerateService(
             )
         }
 
-
         // 저장 UseCase 실행
         contentGeneratePort.save(
             Content(
@@ -35,7 +34,5 @@ class ContentGenerateService(
                 contentImages = contentImages
             )
         )
-
-//        return
     }
 }
