@@ -4,9 +4,9 @@ import com.happiness.api.v1.content.application.dto.ContentImage
 import domain.content.ContentWeather
 
 data class ContentGenerateCommand(
-    var title: String,
-    var content: String,
-    var weather: ContentWeather,
-    var isOpen: Boolean = false,
-    var contentImages: List<ContentImage>,
+    val title: String,
+    val content: String,
+    val weather: ContentWeather,
+    val isOpen: Boolean = false,
+    val contentImages: List<ContentImage>,
 )
