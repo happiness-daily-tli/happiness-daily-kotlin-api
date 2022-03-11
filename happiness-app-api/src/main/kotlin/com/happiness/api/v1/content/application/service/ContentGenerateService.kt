@@ -9,29 +9,29 @@ import domain.content.ContentImage
 
 @UseCase
 class ContentGenerateService(
-    private val contentGeneratePort: ContentGeneratePort
+    private val contentGeneratePort: ContentGeneratePort,
 ) : ContentGenerateUseCase {
 
     override fun generate(command: ContentGenerateCommand) {
         val contentImages = mutableListOf<ContentImage>()
 
-        command.contentImages.forEach {
-            contentImages.add(
-                ContentImage(
-                    id = null,
-                    imageUrl = it.imageUrl
-                )
-            )
-        }
+//        command.contentImages.forEach {
+//            contentImages.add(
+//                ContentImage(
+//                    id = null,
+//                    imageUrl = it.imageUrl
+//                )
+//            )
+//        }
 
-        // 저장 UseCase 실행
+//        저장 UseCase 실행
         contentGeneratePort.save(
-            Content(
+            ContentGenerateCommand(
                 title = command.title,
                 content = command.content,
                 weather = command.weather,
                 isOpen = command.isOpen,
-                contentImages = contentImages
+                contentImages = command.contentImages
             )
         )
     }
