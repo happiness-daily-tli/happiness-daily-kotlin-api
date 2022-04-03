@@ -16,7 +16,7 @@ class CommentLike(
     val comment: Comment,
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn
+    @JoinColumn(name = "id")
     val user: User
 
 ) : BaseEntity()
