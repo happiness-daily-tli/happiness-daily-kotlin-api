@@ -5,6 +5,7 @@ import domain.content.Content
 import javax.persistence.*
 
 @Entity
+@Table(name = "comments")
 class Comment(
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,7 +14,7 @@ class Comment(
     val commentContent: String,
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn
-    val content: Content
+    @JoinColumn(name = "id")
+    val content: Content,
 
 ) : BaseEntity()
