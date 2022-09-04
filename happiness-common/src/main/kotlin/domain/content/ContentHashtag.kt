@@ -4,7 +4,7 @@ import domain.BaseEntity
 import javax.persistence.*
 
 @Entity
-@Table(name = "contentHashtags")
+@Table(name = "content_hash_tags")
 class ContentHashtag(
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

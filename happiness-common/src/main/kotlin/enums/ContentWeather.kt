@@ -1,4 +1,4 @@
-package domain.content
+package enums
 
 enum class ContentWeather(
     private val weather: String

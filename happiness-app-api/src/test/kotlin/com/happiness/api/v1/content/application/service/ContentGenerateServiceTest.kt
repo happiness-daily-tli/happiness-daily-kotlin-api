@@ -3,7 +3,7 @@ package com.happiness.api.v1.content.application.service
 import com.happiness.api.common.KoTestDescribeSpec
 import com.happiness.api.v1.content.application.port.command.ContentGenerateCommand
 import com.happiness.api.v1.content.application.port.out.ContentGeneratePort
-import domain.content.ContentWeather
+import enums.ContentWeather
 import io.mockk.mockk
 
 class ContentGenerateServiceTest(
