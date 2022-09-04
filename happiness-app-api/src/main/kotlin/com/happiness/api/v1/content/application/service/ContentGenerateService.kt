@@ -5,10 +5,12 @@ import com.happiness.api.v1.content.application.port.`in`.ContentGenerateUseCase
 import com.happiness.api.v1.content.application.port.command.ContentGenerateCommand
 import com.happiness.api.v1.content.application.port.command.ContentGeneratePortCommand
 import com.happiness.api.v1.content.application.port.out.ContentGeneratePort
+import com.happiness.api.v1.image.application.service.ImageCheckService
 import domain.content.ContentImage
 
 @UseCase
 class ContentGenerateService(
+    private val imageCheckService: ImageCheckService,
     private val contentGeneratePort: ContentGeneratePort,
 ) : ContentGenerateUseCase {
 

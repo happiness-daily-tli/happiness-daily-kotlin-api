@@ -13,12 +13,10 @@ class ContentGenerateAdapter(
 ) : ContentGeneratePort, FindContentPort {
 
     override fun find(contentCode: String): Content {
-        TODO("Content Return")
-//        return contentRepository.findByContentCode(contentCode)
+        return contentRepository.findByContentCode(contentCode)
     }
 
     override fun save(content: ContentGeneratePortCommand) {
-
         val content = contentRepository.save(
             Content(
                 title = content.title,

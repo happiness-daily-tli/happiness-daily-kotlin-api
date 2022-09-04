@@ -10,7 +10,9 @@ class ContentQueryService(
 ) : ContentQueryUseCase {
 
     override fun query(contentCode: String) {
-        findContentPort.find(contentCode)
+        val find = findContentPort.find(contentCode)
+
+        
     }
 
 }

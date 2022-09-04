@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface ContentRepository : JpaRepository<Content, Int> {
+    fun findByContentCode(contentCode: String): Content
 
-//    fun findByContentCode(contentCode: String): Content
 }
