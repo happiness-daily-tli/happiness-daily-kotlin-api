@@ -1,7 +1,11 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+val projectGroup: String by project
+val applicationVersion: String by project
+val kotlinVersion: String by project
+
 plugins {
-    id("org.springframework.boot") version "2.5.7"
+    id("org.springframework.boot") version "2.7.3"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("com.gorylenko.gradle-git-properties") version "2.3.1"
 
@@ -28,8 +32,6 @@ subprojects {
     apply(plugin = "org.jetbrains.kotlin.plugin.jpa")
     apply(plugin = "com.gorylenko.gradle-git-properties")
 
-    version = "0.0.1"
-    group = "com.happiness"
     java.sourceCompatibility = JavaVersion.VERSION_11
 
     dependencies {
