@@ -9,4 +9,10 @@ data class ContentGeneratePortCommand(
     val weather: ContentWeather,
     val isOpen: Boolean = false,
     val contentImages: List<ContentImage>,
-)
+) {
+
+    data class Result(
+        val id: Long,
+        val contentId: String,
+    )
+}

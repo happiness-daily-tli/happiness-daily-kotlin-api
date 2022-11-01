@@ -1,6 +1,5 @@
 package com.happiness.api.v1.content.adapter.out.infrastructure.persistence
 
-import com.happiness.api.v1.content.application.port.command.ContentGenerateCommand
 import com.happiness.api.v1.content.application.port.command.ContentGeneratePortCommand
 import com.happiness.api.v1.content.application.port.out.ContentGeneratePort
 import com.happiness.api.v1.content.application.port.out.FindContentPort
@@ -16,7 +15,7 @@ class ContentGenerateAdapter(
         return contentRepository.findByContentCode(contentCode)
     }
 
-    override fun save(content: ContentGeneratePortCommand) {
+    override fun save(content: ContentGeneratePortCommand): ContentGeneratePortCommand.Result {
         val content = contentRepository.save(
             Content(
                 title = content.title,
@@ -26,5 +25,9 @@ class ContentGenerateAdapter(
             )
         )
 
+        return ContentGeneratePortCommand.Result(
+            id = content.id,
+            contentId = ""
+        )
     }
 }

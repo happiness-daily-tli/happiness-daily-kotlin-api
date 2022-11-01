@@ -27,7 +27,7 @@ class ContentGenerateService(
 //        }
 
 //        저장 UseCase 실행
-        contentGeneratePort.save(
+        val result = contentGeneratePort.save(
             ContentGeneratePortCommand(
                 title = command.title,
                 content = command.content,
